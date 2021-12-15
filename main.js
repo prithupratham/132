@@ -6,7 +6,7 @@ img = loadImage('dog_cat.jpg');
 function setup(){
     canvas = createCanvas(600,450);
     canvas.center();
-    objectDetector = ml5.objectDetector('cocossd', modelLoded);
+    objectDetector = ml5.objectDetector('cocossd', modelLoaded);
     document.getElementById("status").innerHTML = "Status: Detecting objects";
 }
 function modelLoaded(){
@@ -23,10 +23,10 @@ function draw(){
     rect(35,50,400,380);
 
     fill("#FF0000");
-    text("cat",60,80);
+    text("cat",300,120);
     noFill();
     stroke("#FF0000");
-    rect(35,150,400,350);
+    rect(250,100,320,340);
 }
 function gotResult(error,results){
     if(error){
